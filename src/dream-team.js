@@ -14,6 +14,13 @@ import { NotImplementedError } from '../extensions/index.js';
  *
  */
 export default function createDreamTeam(/* members */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+   if (!Array.isArray(members)) return false;
+  let teamName = [];
+
+  for (let i = 0; i < members.length; i++) {
+    if (typeof members[i] === "string") teamName.push(members[i].trim()[0]);
+  }
+
+  return teamName.join("").toUpperCase().split("").sort().join("");
+  
 }
