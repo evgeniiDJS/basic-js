@@ -23,7 +23,7 @@ export default function countCats(/* matrix */) {
      num += arr[i][x] === '^^';
     }
   }
-  return num;
+  return nums;
 }
 
 }
